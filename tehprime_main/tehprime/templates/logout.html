@@ -1,0 +1,15 @@
+{% extends 'home.html' %}
+{% load static %}
+ 
+{% block content %} 
+ 
+
+
+<div class="border-top pt-3 text-center">
+  <h2>Вы вышли</h2>
+
+  <small class="text-muted"
+    ><a class="btn btn-primary" href="{% url 'login' %}">Авторизоваться снова</a>
+  </small>
+</div>
+{% endblock content %}

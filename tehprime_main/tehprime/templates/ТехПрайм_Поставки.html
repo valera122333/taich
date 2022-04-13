@@ -1,0 +1,36 @@
+{% extends 'home.html' %}
+{% block content %}
+
+
+
+<div class="row my-4 text-center  ">
+
+  <h3>Компания отличается от остальных тем, что она:</h3>
+  <h5 class ='text-start lh-base'>Мы работаем напрямую с производителями. Продукты сомнительного качества — это не только риск потерять репутацию,
+      но и финансовые накладки, связанные с заменой брака. Поэтому поставка качественного оборудования — наша
+      принципиальная позиция.</h5>
+  <h5 class ='text-start lh-base'>Кроме того мы оказываем помощь в покупке техники через аукцион. Наш отдел продаж поможет составить коммерческое
+      пре дложение,<br>
+      отдел закупок — подготовит техническое задание, а специалисты юридического отдела проследят, чтобы все было
+      по-честному и проконсультируют в сомнительных вопросах.</h5>
+      {% for postavka in postavki %}
+  <div class="col-md-4 p-4">
+      <div class="  ">
+        
+
+          <div class="card-body text-start lh-base">
+
+            <h4 class="card-title">{{postavka.title}}</h4>
+            <p class="card-text">{{postavka.sub_title }}</p>
+            <div class=" "><a class="btn btn-primary " href="{% url 'postavki_detail' postavka.id %}">Подробнее</a></div>
+
+
+          </div>
+      </div>
+  </div>
+  
+  {% endfor %}
+</div>
+             
+{% endblock %}
+

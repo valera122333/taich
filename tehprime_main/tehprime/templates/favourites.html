@@ -1,0 +1,96 @@
+{% extends "home.html" %}
+{% load static %}
+ 
+{% block content %}
+<div class="row my-4 text-center  ">
+  <h5>Личный кабинет пользователя {{request.user.username }}</h5>
+  <h4 class="text-center fs-5">Добавленные проекты для ознакомления в избранное:</h4>
+{% for proect in new %}
+<div class="col-md-4 p-4">
+    <div class="card   ">
+        <img src="{{proect.image.url }}" class="card-img-top"   />
+
+        <div class="card-body text-start lh-base">
+
+            <h2>{{ proect.title }}</h2>
+            <p>{{ proect.description|truncatechars:100 }}</p>
+            <div class=" "><a class="btn btn-primary " href="{% url 'project_detail' proect.id %}">Подробнее</a> 
+            {% if request.user.is_authenticated %}
+
+             {% if fav %}
+    
+          {% else %}
+          <a href="{% url 'favourite_add' proect.id %}" class="btn btn-warning">Удалить из избранных</a></div>
+          {% endif %}
+        {% endif %}
+        </div>
+     
+</div>
+
+</div>
+ 
+
+
+{%endfor%}
+ 
+  <h4 class="text-center fs-5">Заявки пользователя {{request.user.username }}</h4>
+{% for cont in zayzvka %}
+ 
+
+<div class="col-md-4 p-4">
+  <div class="card   ">
+     
+
+      <div class="card-body text-start lh-base">
+
+          <h4> Ваше имя: {{ cont.name }}</h4>
+          <h5> Ваша Почта: {{ cont.email }}</h5>
+          <h6> Ваш номер телефона: {{ cont.phone }}</h6>
+          <h5>Описание заявки: {{ cont.subject  }}</h5>
+          <h6> Дата обращения: {{cont.date_posted}}</h6>
+      
+
+         
+          <div class="container py-3 text-center">
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal">
+              Удалить заявку
+            </button>
+          </div>
+
+          <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Внимание!</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <img class="img-fluid" src="/examples/images/admin-dashboard.jpg" alt="">
+                  <p>При удалении заявки она пропадет не только в вашем личном кабинете, но и из нашей базы данных! Если вы удалите заявку,
+                     то у нас не останется ваших контактных данных!Обязательно подумайте</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="{% url 'delete-contact' cont.id %}" class="btn btn-danger">Удалить заявку</a> 
+                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Нет, я передумал,вернуться назад</button>    </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+           
+         
+      </div>
+     
+   
+      
+     
+
+{%endfor%}
+ 
+
+ 
+
+
+</div>
+{% endblock %}

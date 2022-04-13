@@ -1,0 +1,49 @@
+{% extends 'home.html' %}
+{% block content %}
+
+<div class=" px-3 pt-3 "   >
+ 
+    <div>
+     
+      <div class="bg-image text-center"
+        data-mdb-ripple-color="light">
+        <img src="{{card.image1.url}}" class="img-fluid" />
+         
+      </div>
+  
+    
+      <div class="row mb-3">
+        <div class="col-6">
+          
+        </div>
+  
+        <div class="col-6 text-end">
+          <u> Дата новости {{card.date_posted}}</u>
+        </div>
+      </div>
+  
+      <!-- Article title and description -->
+      <div  class="text-dark text-center">
+        <h4>{{ card.title}}</h4>
+        <h5>{{ card.sub_title}}</h5>
+  
+        <p>
+            {{ card.description}}
+             
+        </p>
+        <a href="javascript:history.go(-1)" class="btn btn-danger ">Назад</a>
+      </div>
+  
+     
+     
+  
+    
+  
+     
+  </div>
+</div>
+
+
+
+
+{% endblock %}

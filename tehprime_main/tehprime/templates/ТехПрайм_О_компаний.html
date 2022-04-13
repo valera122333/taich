@@ -1,0 +1,35 @@
+{% extends 'home.html' %}
+{% block content %}
+
+ 
+  
+ 
+       
+   
+  
+      
+      <div class="container px-4 py-5" id="featured-3">
+      
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          {% for abouts in about %}  
+          <div class="feature col">
+            <div class="feature-icon bg-primary bg-gradient">
+              <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
+            </div>
+            <h2>{{abouts.title}}</h2>
+            <p>{{abouts.sub_title}}</p>
+            <p>{{abouts.description}}</p>
+            
+          </div>
+         
+          {% endfor %}  
+        </div>
+        
+      </div>    
+  
+ 
+ 
+ 
+{% endblock %}
+
+ 

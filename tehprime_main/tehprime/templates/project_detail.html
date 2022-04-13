@@ -1,0 +1,64 @@
+{% extends 'home.html' %}
+{% block content %}
+{% load static %}
+ 
+
+<div class="row my-4 text-center  ">
+    <h3>{{projects.title }}</h3>
+<div class="col-md-4 p-4">
+    <div class="card   ">
+        <img src="{{projects.image1.url }}" class="card-img-top"   />
+ 
+      </div>
+ 
+    </div>
+    <div class="col-md-4 p-4">
+        <div class="card   ">
+            <img src="{{projects.image2.url }}" class="card-img-top"   />
+     
+          </div>
+     
+        </div>
+        <div class="col-md-4 p-4">
+            <div class="card   ">
+                <img src="{{projects.image3.url }}" class="card-img-top"   />
+         
+              </div>
+         
+            </div>
+            <div class="col-md-4 p-4">
+                <div class="card   ">
+                    <img src="{{projects.image4.url }}" class="card-img-top"   />
+             
+                  </div>
+             
+                </div>
+                <div class="col-md-4 p-4">
+                    <div class="card   ">
+                        <img src="{{projects.image5.url }}" class="card-img-top"   />
+                 
+                      </div>
+                 
+                    </div>
+                    <div class="col-md-4 p-4">
+                        <div class="card   ">
+                            <img src="{{projects.image6.url }}" class="card-img-top"   />
+                     
+                          </div>
+                           
+                        
+                </div>
+                {{projects.description|safe}}<br>
+               
+            </div>
+          
+            <a href="javascript:history.go(-1)" class="btn btn-danger ">Назад</a>
+          </div>
+
+
+{% endblock %}
+
+
+
+
+
