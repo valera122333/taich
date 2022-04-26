@@ -1,0 +1,45 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %} {{subjects.name}} {% endblock %}
+
+ 
+
+
+{% block content %}
+<section id="best-features" class="text-center">
+              <h2 class="mb-5 mt-5 font-weight-bold" style="color:blue;">Практикуйтесь, изучайте, создавайте!</h2>
+              <!-- class row for description-->
+              <div class="row d-flex justify-content-center mb-4">
+                <!-- class column -->
+                <div class="col-md-8 mb-5">
+                  <h4 class="grey-text">Все доступные уроки раздела.</h4>
+                </div>
+              </div>
+              <!-- class row2 for cards -->
+              <div class="row d-flex justify-content-center mb-3 mr-3 ml-3">
+                {% for lesson in subjects.lessons.all %}
+                <div class="col-sm-6 mb-4 col-12">
+                  <div class="  box-shadow-hover">
+                    <div class="card-body">
+                      <h5 class="card-title">  {{lesson.name}}</h5>
+                      <!-- <p class="card-text">With supporting text below as a natural lead-in to additional content.</p> -->
+                      <a href="{% url 'lesson_detail' slug=lesson.slug subject=subjects.slug standard=lesson.Standard.slug %}" >
+                      <button type="button" class="btn-primary"><span>Изучать урок</span></button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+        <div class="row d-flex justify-content-center mb-3">
+       
+        </div>
+
+</section>
+
+
+
+
+
+
+{%endblock%}

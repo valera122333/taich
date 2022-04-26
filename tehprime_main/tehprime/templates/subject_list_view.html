@@ -1,0 +1,53 @@
+  {% extends 'home.html' %}
+  {% load static %}
+  {% block title %} разделы {% endblock %}
+
+
+  
+
+  {% block content %}
+ 
+            
+
+                <section class="text-center mt-3">
+                  <h2 class="mb-5 font-weight-bold" style="color:blue;">Доступные разделы выбранной категории</h2>
+                  <!-- class row for description-->
+                  <div class="row d-flex justify-content-center mb-4">
+                    <!-- class column -->
+                    <div class="col-8">
+                      <h4 style='color:blue;'>Выбирайте нужную тему и проходите все уроки по ней!
+                
+                      </h4>
+                    </div>
+                  </div>
+             
+
+ 
+            <div class="row my-4 text-center  ">
+              {% for subject in standards.subjects.all %}
+              <div class="col-md-2 p-4">
+                <h5 style='color:blue;'>{{ subject.name }}</h2>
+                
+                  <div class="">
+                      <img  src="{{subject.image.url }}" class="card-img-top" />
+                      <a   href="{% url 'lesson_list' slug=subject.slug standard=standards.slug %}"><button class="btn-primary"> <span> Выбрать тему</span></button></a>
+                      <h4 >{{ subject.description }}</h4>
+                      <div class="card-body text-start"  >
+          
+                          
+                           
+                       
+          
+          
+                      </div>
+                     
+                  </div>
+                 
+              </div>
+              {% endfor %}
+          </div>
+
+
+              
+              </section>
+  {%endblock%}

@@ -1,11 +1,39 @@
 {% load static %}
-<footer class="bg-dark py-4 mt-auto">
-    <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-            <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Your Website 2022</div></div>
-            <div class="col-auto">
-               
-            </div>
-        </div>
-    </div>
-</footer>
+
+<footer><!--футер сайта   -->
+    <p>Связь с нами</p>
+ 
+ <div class="socialIcons"> 
+      
+     
+ </div>
+
+ <p>Copyright &copy; Your Website 2022</p>
+  <div class=phone>Если есть вопросы, свяжитесь с нами:<a class=" text-primary" href="tel:+7(999) 999-99-99">+7 (999) 999-99-99 </a></div>
+ <p>Хабаровск
+    680021, ул. Синельникова д. 20</p>
+ <p>По всем вопросам пишите нам на<a class=" text-primary" href="mailto:sales@tehprime.com">  почту </a>или оставляйте<a class=" text-primary" href="{% url 'contact' %}">заявку </a>на нашем сайте</p> <br>
+     </footer>
+     
+     
+     <style>
+
+        footer{ /* настраиваем весь футер */ 
+            width: 100%;
+            height: auto;
+            background:#212529;
+            margin: 0	auto;
+            text-align: center;
+            padding-top: 25px;
+            color:white;
+            font-size: 18px;	 
+        }
+        footer a{ /* стили ссылок футера*/ 	
+            font-size: 20px;
+            margin-left: 20px; 
+            text-decoration: none !important;
+            border: none !important 
+        }
+        
+        
+     </style>

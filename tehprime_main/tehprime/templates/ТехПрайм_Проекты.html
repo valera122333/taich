@@ -3,14 +3,14 @@
 
 <div class="row my-4 text-center  ">
 
-    <h3>Компания отличается от остальных тем, что она:</h3>
-    <h5 class ='text-start lh-base'>Мы работаем напрямую с производителями. Продукты сомнительного качества — это не только риск потерять репутацию,
+    <h3>СТАТЬИ О МУЗЫКЕ</h3>
+    {% comment %} <h5 class ='text-start lh-base'>Мы работаем напрямую с производителями. Продукты сомнительного качества — это не только риск потерять репутацию,
         но и финансовые накладки, связанные с заменой брака. Поэтому поставка качественного оборудования — наша
         принципиальная позиция.</h5>
     <h5 class ='text-start lh-base'>Кроме того мы оказываем помощь в покупке техники через аукцион. Наш отдел продаж поможет составить коммерческое
         пре дложение,<br>
         отдел закупок — подготовит техническое задание, а специалисты юридического отдела проследят, чтобы все было
-        по-честному и проконсультируют в сомнительных вопросах.</h5>
+        по-честному и проконсультируют в сомнительных вопросах.</h5> {% endcomment %}
 
 
 {% for proect in projects %}
@@ -20,13 +20,15 @@
 
         <div class="card-body text-start lh-base">
 
-            <h2>{{ proect.title }}</h2>
+            <h2  >{{ proect.title }}</h2>
+            <br>
             <p>{{ proect.description|truncatechars:100 }}</p>
+            <br>
             <div class=" "><a class="btn btn-primary " href="{% url 'project_detail' proect.id %}">Подробнее</a></div>
             {% if request.user.is_authenticated %}
             {% if fav %}
               {% else %}
-              <div class=" "><a href="{% url 'favourite_add' proect.id %}" class="btn btn-outline-primary">Добавить в избранное</a></div>
+              <div class=" "><a href="{% url 'favourite_add' proect.id %}" class="btn btn-outline-primary">Читать позже</a></div>
             {% endif %}
           {% endif %}
         </div>

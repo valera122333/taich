@@ -2,7 +2,13 @@
 {% load static %}
  
 {% block content %}
+
+ 
+
+
+
 <div class="row my-4 text-center  ">
+  
   <h5>Личный кабинет пользователя {{request.user.username }}</h5>
   <h4 class="text-center fs-5">Добавленные проекты для ознакомления в избранное:</h4>
 {% for proect in new %}
@@ -43,12 +49,25 @@
 
       <div class="card-body text-start lh-base">
 
-          <h4> Ваше имя: {{ cont.name }}</h4>
+          <h5> Ваше имя: {{ cont.name }}</h5>
           <h5> Ваша Почта: {{ cont.email }}</h5>
-          <h6> Ваш номер телефона: {{ cont.phone }}</h6>
+          <h5> Ваш номер телефона: {{ cont.phone }}</h5>
           <h5>Описание заявки: {{ cont.subject  }}</h5>
-          <h6> Дата обращения: {{cont.date_posted}}</h6>
-      
+          <h5> Дата обращения: {{cont.date_posted}}</h5>
+          {% if cont.status == 'Доставлена' %} 
+          <h5> Статус заявки : <label class="text-info  fs-5 "> {{cont.status}}</label></h5>
+          {% endif %}
+          {% if cont.status == 'Рассмотрена' %} 
+          <h5> Статус заявки : <label class="text-primary fs-5 "> {{cont.status}}</label></h5>
+          {% endif %}
+          {% if cont.status == 'В ожидании' %}
+        
+          <h5> Статус заявки : <label class="text-warning fs-5 "> {{cont.status}}</label></h5>
+          {% endif %}
+          {% if cont.status == 'Отклонена' %}
+        
+          <h5> Статус заявки : <label class="text-danger fs-5 "> {{cont.status}}</label></h5>
+          {% endif %}
 
          
           <div class="container py-3 text-center">

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'tehprime',
     'crispy_forms',
+    'embed_video',
 ]
 
 MIDDLEWARE = [

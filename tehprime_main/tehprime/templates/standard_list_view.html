@@ -1,0 +1,55 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block title %} категории игры на музыкальных инструментах {% endblock %}
+
+
+ 
+
+{% block content %}
+<!-- section 1 for standards-->
+
+<section class="text-center mt-3">
+  <h2 class="mb-5 font-weight-bold" style="color:blue;">Выберите интересующее направление и изучайте</h2>
+  <!-- class row for description-->
+  <div class="row d-flex justify-content-center mb-4">
+    <!-- class column -->
+    <div class="col-md-8">
+      <h3 class="" style="color:blue;">Выбирайте любое направление для обучения!
+
+      </h3>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <div class="row">
+          {% for standard in standards %}
+          <div class="col-4 d-flex mb-5 justify-content-center">
+            <div class=" text-center" >
+              <div class="card-body">
+                <h4 class="card-title" style="color:blue;">{{standard.name}}</h4>
+  
+                <img  src="{{standard.image.url}}" class="card-img-top" />
+                <h6 class="card-title">{{standard.description }}</h6>
+                {% if user.is_authenticated %}
+                <a href="{% url 'subject_list' slug=standard.slug %}" class="btn btn-primary" style= >Начать</a>
+                {%else%}
+                <p>Зарегистрируйтесь или войдите</p>
+                <a href="{% url 'login' %}" class="btn btn-primary" style="">Войти</a>
+                <a href="{% url 'register' %}" class="btn btn-primary" style="">Зарегистрироваться</a>
+                {%endif%}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+  </div>
+</section>
+
+{%endblock%}

@@ -3,19 +3,24 @@
  
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container px-5">
-                <a class="navbar-brand" href="/">Техпрайм</a>
+                <a class="navbar-brand" href="/">MusicEducate</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                      
-                       
-                        <li class="nav-item"><a class="nav-link" href="{% url 'postavki' %}">Поставки</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'proect' %}">Проекты</a></li>
+                         
+
+                        
+                        <li class="nav-item"><a class="nav-link" href="{%url 'standard_list' %}">обучение игры на музыкальных инструментах</a></li>
+               
+                        
+                        <li class="nav-item"><a class="nav-link" href="{% url 'proect' %}">О музыке</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'vendor' %}">Вендоры</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">О компании</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">О нас</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Контакты</a></li>
 
-
+                      {% if user.is_superuser %}
+                         <li class="nav-item"><a class="nav-link" href="{% url 'admin:index' %}"> админ</a></li>
+                        {% endif %}
 
                         {% if user.is_authenticated %} 
                 
@@ -35,6 +40,7 @@
 
 
                     </ul>
+                    
                 </div>
             </div>
             

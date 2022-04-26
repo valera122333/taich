@@ -7,9 +7,9 @@ urlpatterns = [
     path("", home, name="home"),
     path('vendor/', views.vendor, name='vendor'),
     path('contact/', views.contact, name='contact'),
+
     path('about/', views.about, name='about'),
-    path('postavki/', views.postavki, name='postavki'),
-    path('postavka/<int:post_id>', views.postavki_detail, name='postavki_detail'),
+
     path('proect/', views.proect, name='proect'),
     path('project/<int:project_id>', views.project_detail, name='project_detail'),
     path('card_info/<int:card_id>', views.card_detail, name='card_detail'),
@@ -26,5 +26,10 @@ urlpatterns = [
     path('delete_contact/<int:pk>',
          views.delete_contact, name="delete-contact"),
 
-
+    path('educate/', views.StandardListView.as_view(), name='standard_list'),
+    path('<slug:slug>/', views.SubjectListView.as_view(), name='subject_list'),
+    path('<str:standard>/<slug:slug>/',
+         views.LessonListView.as_view(), name='lesson_list'),
+    path('<str:standard>/<str:subject>/<slug:slug>/',
+         views.LessonDetailView.as_view(), name='lesson_detail'),
 ]

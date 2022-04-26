@@ -2,57 +2,161 @@
 {% block content %}
  
 
+
+ 
+
+<style>
+    .map-container {
+        border: 8px solid #337AB7;
+        margin: 20px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+    }
+     
+    /* Ставим фильтры для самой карты */
+    .map-container .ymaps-2-1-79-ground-pane {
+        filter: brightness(0.8) contrast(1.5) saturate(2);
+    }
+     
+    /* Убираем лишнии кнопки и ползунок масштаба */
+    .map-container .ymaps-2-1-79-controls__toolbar_right,
+    .map-container .ymaps-2-1-79-controls__toolbar_left,
+    .map-container .ymaps-2-1-79-zoom__scale {
+        display: none;
+    }
+     
+    /* Оформляем кнопки плюс и минус */
+    .map-container .ymaps-2-1-79-float-button {
+        border-color: #337AB7;
+        background-color: #337AB7;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .map-container .ymaps-2-1-79-float-button-icon {
+        border: 0;
+        width: 22px;
+        height: 22px;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+    .map-container .ymaps-2-1-79-float-button:hover .ymaps-2-1-79-float-button-icon {
+        opacity: 1;
+    }
+    .map-container .ymaps-2-1-79-zoom {
+        transform: scale(1.5);
+        height: 10px!important;
+    }
+    .map-container .ymaps-2-1-79-controls__control {
+        inset: 36px auto auto 30px!important;
+    }
+    .map-container .ymaps-2-1-79-zoom__plus .ymaps-2-1-79-zoom__icon {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M11 15H6v-4h5V6h4v5h5v4h-5v5h-4v-5zm0 0'/%3e%3c/svg%3e");
+        background-size: 16px 16px;
+    }
+    .map-container .ymaps-2-1-79-zoom__minus .ymaps-2-1-79-zoom__icon {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M6 11h14v4H6z'/%3e%3c/svg%3e");
+        background-size: 16px 16px;
+    }
+     
+    /* Оформляем балун */
+    .map-container .ymaps-2-1-79-balloon__content {
+        font: 15px/24px Arial,sans-serif;
+        color: #FFF;
+        padding: 8px 8px 8px 16px;
+    }
+    .map-container .ymaps-2-1-79-balloon__layout,
+    .map-container .ymaps-2-1-79-balloon__content, 
+    .map-container .ymaps-2-1-79-balloon__tail::after {
+        background: #337AB7;
+    }
+    .map-container .ymaps-2-1-79-balloon__close-button {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3e%3cpath fill='%23fff' fill-rule='evenodd' d='M14 .7l-.7-.7L7 6.3.7 0 0 .7 6.3 7 0 13.3l.7.7L7 7.7l6.3 6.3.7-.7L7.7 7z' clip-rule='evenodd'/%3e%3c/svg%3e");
+        opacity: 1;
+        height: 30px;
+    }
+    .map-container .ymaps-2-1-79-islets_icon-caption {
+        background: #337AB7;
+        font: 16px/24px Arial,sans-serif;
+        color: #FFF;
+        padding: 2px 16px 0 30px;
+    }
+     
+    /* Оформляем нижнюю строку */
+    .map-container .map-info {
+        display: flex;
+        background: #337AB7;
+        color: #FFF;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font: 16px/24px Arial,sans-serif;
+    }
+    .map-container .map-info div {
+        padding: 10px 12px 4px;
+    }
+    .map-container .map-info a {
+        color: #FFF;
+        text-decoration: none;
+        padding-left: 6px;
+    }
+</style>
+
+
 <div class="row my-4 text-center  ">
 
-    <h3>Компания отличается от остальных тем, что она:</h3>
+    <h3>Наши контакты</h3>
 </div>
 
 
  <div class='map'> 
-<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa83668b6077e62b6dfe7e774bc015f87c55ff4ea3ffa1985ae0a9ca504e5a180&amp;source=constructor" width="100%" height="470" frameborder="0"></iframe>
+    <div class="map-container">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa83668b6077e62b6dfe7e774bc015f87c55ff4ea3ffa1985ae0a9ca504e5a180&amp;width=100%25&amp;height=656&amp;lang=ru_RU&amp;scroll=true"></script>
+        <div class="map-info">
+            <div class="map-address">
+                Торговый центр; Россия, Синельникова 20 А    
+            </div>
+            <div class="map-phone">
+                <a href="tel:+79999999999">+7 (999) 999-99-99 </a>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="row   text-center  ">
 
-    <h3>Компания отличается от остальных тем, что она:</h3>
+    <h3>Если есть вопросы по поводу обучения или сотрудничества, то пишите!</h3>
 </div>
-    <div class="  contact-form  my-1  container-fluid justify-content-center align-items-center  ">
-    <form method="post"  >
+</div>
+<div class=" col-10 contact-form  my-1  container-fluid ">
+    <form method="post">
         {% csrf_token %}
-         
   
-       <div class="row ">
-            <div class="col-6 justify-content-center ">
+  
+        <div class="row ">
+            <div class="col-md-12 justify-content-center container ">
                 <div class="form-group ">
-                    <input type="text" name="name"    class="form-control" placeholder="Ваше имя *" value=""  required/>
+                    <input type="text" name="name" class="form-control " placeholder="Ваше имя *" value="" required/>
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email"    class="form-control" placeholder="Почта *" value="" required/>
+                    <input type="email" name="email" class="form-control" placeholder="Почта *" value="" required/>
                 </div>
                 <div class="form-group">
-                    <input type="tel" name="phone"    class="form-control" placeholder="Номер телефона *" value=""  required />
+                    <input type="tel" name="phone" class="form-control" placeholder="Номер телефона *" value="" required />
                 </div>
+                <div class="form-group">
+                  <textarea name="subject" class="form-control" required placeholder="Что хотели бы узнать? *" style="width: 100%; height: 150px;"></textarea>
+              </div>
                 <div class="form-group my-3">
-                    <input type="submit" name="btnSubmit" class="btnContact btn btn-primary" value="Отправить"   />
+                    <input type="submit" name="btnSubmit" class="btnContact btn btn-primary" value="Отправить" />
                 </div>
             </div>
-           <div class="col-md-6">
-                <div class="form-group">
-                    <textarea name="subject" class="form-control" required  placeholder="Опишите примерно какая у вас задача *" style="width: 100%; height: 150px;"></textarea>
-                </div>
-             
-            </div> 
+           
         </div>
     </form>
-</div>
+  </div>
+  
+  
      
 
-    </div>
+     
  
-    <style>
-        .map{
-            margin-top: 100px;
-        }
-    </style>
+ 
   
 {% endblock %}
  

@@ -15,36 +15,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="{% static 'main.css' %}">
-    <title>Техпрайм</title>          
+    <title>MusicEducate</title>          
 </head>
 {% include 'navbar/navbar.html' %}   
 <div class="container-fluid  col-10">
     {% block content %}
+
+
+    
+
     <div class="container px-4 px-lg-5">
         <!-- Heading Row-->
         <div class="row gx-4 gx-lg-5 align-items-center my-5"> 
      
-            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'images/i.webp' %}"  alt="..." /></div>
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'images/1111.jpg' %}"  alt="..." /></div>
             <div class="col-lg-5">
-                <h1 class="font-weight-light">Business Name or Tagline</h1>
-                <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-                <a class="btn btn-primary" href="{% url 'postavki' %}">Call to Action!</a>
+                <h3 class="font-weight-light">Обучение музыке</h3>
+                <p>Обучение музыке насколько необходимо в современном мире? Музыка окружает нас повсюду. В современном компьютерном мире даже не надо отправляться на концерт, в театр или консерваторию, чтобы послушать прекрасную музыку — дома и на работе, в поездке и на отдыхе музыка всегда с нами. Музыка окружает нас всю жизнь. Детские песенки мы запоминаем навсегда и затем поем их нашим детям. Песни нашей молодости навевают романтическое настроение первой влюбленности. Марши придают особенную торжественность официальным (и неофициальным) мероприятиям. Музыка делает нас счастливее.</p>
+        
             </div>
         </div>
     </div>    
 </div>
 <div class="px-4 pt-5 my-5 text-center border-bottom">
-    <h1 class="display-4 fw-bold">Скриншот по центру</h1>
+    <h1 class="display-4 ">Музыка то, что нас окружает</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">Быстро создавайте и настраивайте адаптивные сайты, ориентированные на мобильные устройства, с помощью Bootstrap, самого популярного в мире инструментария с открытым исходным кодом для интерфейса пользователя, включающего переменные и миксины Sass, адаптивную сеточную систему, обширные готовые компоненты и мощные плагины JavaScript.</p>
+      <p class="lead mb-4">Мы поможем начинающим любителям музыки подробнее о ней узнать и поможем научиться игре на музыкальных инструментах!</p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
  
-        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'postavki' %}">Call to Action!</a>
+     
       </div>
     </div>
     <div class="overflow-hidden" style="max-height: 30vh;">
       <div class="container px-5">
-        <img src="{% static 'images/i.webp' %}" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+        <img src="{% static 'images/11111.jpg' %}" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
       </div>
     </div>
   </div>
@@ -52,25 +56,81 @@
   
  
 
+ 
+
+ 
+
 
 
   <div class="container px-4 py-5" id="custom-cards">
-  
-    <h3>Компания отличается от остальных тем, что она:</h3>
-    <h5 class ='text-start lh-base'>Мы работаем напрямую с производителями. Продукты сомнительного качества — это не только риск потерять репутацию,
-        но и финансовые накладки, связанные с заменой брака. Поэтому поставка качественного оборудования — наша
-        принципиальная позиция.</h5>
-    <h5 class ='text-start lh-base'>Кроме того мы оказываем помощь в покупке техники через аукцион. Наш отдел продаж поможет составить коммерческое
-        пре дложение,<br>
-        отдел закупок — подготовит техническое задание, а специалисты юридического отдела проследят, чтобы все было
-        по-честному и проконсультируют в сомнительных вопросах.</h5>
+    <h1 class="display-4 text-center">MusicEducate вам поможем со всем разобраться!</h1>
+    <main class="sgroup-container">
+      <section class="sgroup">
+          <div class="close-sgroup">&times;</div>
+          <div class="title-box">Обучение игры на музыкальных инструментах
+          </div>
+          <div class="info-box">
+              <div class="info-col-1">
+                  <img src="{% static 'images/3.jpg' %}" alt="" />
+              </div>
+              <div class="info-col-2">
+                  <p>Игра на музыкаль­ном инструмен­те всегда была в почете в нашем обществе, а сам умелец был предметом поголовно­го уважения. Сейчас это ещё и отличный способ занять себя и даже зарабаты­вать деньги. Вы можете выбрать что угодно – гитару, укулеле, скрипку, фортепиано, флейту - наши курсы игры на музыкаль­ных инструмен­тах помогут вам освоить хоть струнные, хоть клавишные.</p>
+              </div>    
+          </div>
+      </section>
+      <section class="sgroup">
+          <div class="close-sgroup">&times;</div>
+          <div class="title-box">Онлайн-курсы игры на музыкаль­ных инструмен­тах</div>
+          <div class="info-box">
+              <div class="info-col-1">
+                  <img src="{% static 'images/5.jpg' %}" alt="" />
+              </div>
+              <div class="info-col-2">
+                  <p>Можно ли научиться играть в Интернете? Да, конечно. Многие считают, что обязатель­ным условием для развития музыкаль­ных способно­стей является музыкаль­ная школа, но на самом деле это далеко не так. Прогресс не стоит на месте, многие преподава­тели перебирают­ся в режим Onlineчто­бы обучать в аудиовизу­альной форме. И это ни чем не хуже регулярных посещений сольфеджио, которое так ненавидят все, кто хоть раз сталкивал­ся с музыкаль­ным образовани­ем.
 
+                    Обучение игре на музыкаль­ных инструмен­тах происходит с помощью видео-роликов. Вам не обязатель­но выходить из дома и куда-то есть – нужен всего лишь гаджет с возможно­стью подключе­ния к сети Интернет. Это лучше, чем полностью самостоя­тельное обучение: дело в том, что без преподава­теля часто тяжело организо­вать себя и усердно уделять занятиям время.
+                    
+                    Очень здорово, если вы уже владеете основами игры: тогда вам будет ещё проще, а мы сделаем из вас настоящего профессио­нала. Новичкам тоже не стоит переживать: не умеете – научим. В том случае, если вы успешно овладели одним инструмен­том, но хотите осилить второй, наши курсы станут для вас повышением квалифика­ции, переподго­товкой и переквали­фикацией в одном флаконе. Ну, или вы можете начать препода­вать вместе с нами – просто запишите свой курс.</p>
+              </div>    
+          </div>    
+      </section>  
+      <section class="sgroup">
+          <div class="close-sgroup">&times;</div>
+          <div class="title-box">Учим играть по нотам</div>
+          <div class="info-box">
+              <div class="info-col-1">
+                  <img src="{% static 'images/6.jpg' %}"alt="" />
+              </div>
+              <div class="info-col-2">
+                  <p>Для того чтобы сохранить музыкальное произведение на века, были изобретены ноты. Неподготовленный музыкант не сумеет воспроизвести его, не понимая, как читать ноты. В то время как профессионал без труда воспроизведет любую музыку, лишь заглянув в нотную тетрадь. Все дело в наличии навыка и опыта. С помощью знаний, можно с легкостью играть музыку, складывая ноты как во время прочтения книги.</p>
+              </div>    
+          </div>    
+      </section>
+      <section class="sgroup">
+          <div class="close-sgroup">&times;</div>
+          <div class="title-box">Расскажем все про музыку и как ее создавать!</div>
+          <div class="info-box">
+              <div class="info-col-1">
+                <img src="{% static 'images/9.jpg' %}"alt="" />
+              </div>
+              <div class="info-col-2">
+                  <p>Музыка окружает нас с самого детства. И тогда же у нас появляются первые музыкальные инструменты. Помните свой первый барабанчик или бубен? А блестящий металлофон, по пластинкам которого нужно было стучать деревянной палочкой? А дудочки с дырочками на боку? На них при определенной сноровке можно было даже сыграть простые мелодии.
+
+                    Игрушечные инструменты - это первый шаг в мир настоящей музыки. Сейчас можно приобрести самые разные музыкальные игрушки: от простеньких барабанов и гармошек до почти настоящих пианино и синтезаторов. Вы думаете, это только игрушки? Вовсе нет: в подготовительных классах музыкальных школ из таких игрушек составляются целые шумовые оркестрики, в которых малыши самозабвенно дуют в дудочки, стучат в барабаны и бубны, подстегивают ритм маракасами и играют первые песенки на ксилофоне... И это их первый настоящий шаг в мир музыки.</p>
+              </div>    
+          </div>    
+      </section>
+  </main>
+    
+    <h5 class ='text-center'>Виды инструментов
+       </h5>
+       <p>В мире музыки существует свой порядок и классификация. Инструменты подразделяются на большие группы: струнные, клавишные, ударные, духовые, а еще язычковые. Какие из них появились раньше, какие позже, сейчас трудно сказать наверняка. Но уже древние люди, стрелявшие из лука, заметили, что натянутая тетива звучит, тростниковые трубочки, если в них подуть, издают свистящие звуки, а ритм удобно отбивать на любых поверхностях всеми подручными средствами. Эти предметы стали прародителями струнных, духовых и ударных инструментов, известных уже в Древней Греции. Так же давно появились язычковые, а вот клавишные были изобретены чуть позднее. Рассмотрим эти основные группы.</p>
     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
       
         {% for car in cart %}
       <div class="col">
-        <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('{{car.image1.url}}')" > 
-          {% comment %} <img  src="{{car.image1.url }}" class="card-img-top"   />     {% endcomment %}
+        <div  class="card card-cover h-100  overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('{{car.image0.url}}')" > 
+         
           <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
        
           
@@ -98,7 +158,205 @@
  
     {% endblock %}
 </div>
- 
+<style>
+  .sgroup-container {
+    position: relative;
+    height: 600px;
+    margin: 20px 0;
+}    
+.sgroup {
+    position: absolute;
+    z-index: 0;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.sgroup:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sgroup:hover:after {
+    content: "";
+    background-color: rgba(0,0,0,0.2);
+}
+.sgroup:nth-child(1) {
+    top: 0;
+    left: 0;
+    background-image: url('{% static 'images/2.jpg' %}');
+}
+.sgroup:nth-child(2) {
+    top: 0;
+    left: 50%;
+    background-image: url('{% static 'images/4.jpg' %}');
+}
+.sgroup:nth-child(3) {
+    top: 50%;
+    left: 0;
+    background-image: url('{% static 'images/7.jpg' %}');
+}
+.sgroup:nth-child(4) {
+    top: 50%;
+    left: 50%;
+    background-image: url('{% static 'images/8.jpg' %}');
+}
+.sgroup.is-expanded {
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    cursor: initial;
+}
+.has-expanded-item .sgroup:not(.is-expanded) {
+    transform: scale(0);
+}
+.close-sgroup {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    width: 60px;
+    height: 60px;
+    line-height: 1;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    cursor: pointer;
+    pointer-events: none;
+    transition: opacity 150ms linear;
+    will-change: opacity;
+}
+.sgroup.is-expanded .close-sgroup {
+    opacity: 1;
+    transition-delay: 500ms;
+    pointer-events: initial;
+}
+.title-box {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    padding: 0 20px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-family: Tahoma, sans-serif;
+    text-shadow: -1px 0 1px #989898, 0 1px 1px #989898, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+    font-size: 30px;
+    font-weight: 600;
+}
+.sgroup.is-expanded:after {
+    background-color: rgba(0,0,0,0.7);
+}
+.sgroup.is-expanded .title-box {
+    justify-content: flex-start;
+    height: auto;
+    margin: 30px 40px;
+}
+.sgroup.is-expanded .info-box {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    padding: 0 20px;
+    height: 75%;
+    overflow: hidden;
+    align-items: center;        
+}
+.info-box .info-col-1,
+.info-box .info-col-2 {
+    padding: 0 40px;
+}
+.info-box .info-col-1 {
+    width: 40%;
+}
+.info-box .info-col-1 img {
+    width: 100%;
+}
+.info-box .info-col-2 {
+    width: 60%;
+    max-height: 100%;
+    overflow-y: auto;
+    color: #FFF;
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0;
+    font-family: Verdana, sans-serif;  
+    transition: opacity 0.5s linear 0.4s;
+}
+.sgroup.is-expanded .info-box .info-col-2 {
+    opacity: 1;
+}
+@media screen and (max-width: 991px) {
+    .title-box {
+        font-size:18px;
+    }
+    .sgroup.is-expanded .info-box {
+        flex-wrap: wrap;
+    }
+    .info-box .info-col-1 {
+        display: none;
+    }
+    .info-box .info-col-2 {
+        width: 100%;
+    }
+}
+</style>
+
+<script>
+  var Boxlayout = (function () {
+    var wrapper = document.body,
+    sgroups = Array.from(document.querySelectorAll(".sgroup")),
+    closeButtons = Array.from(document.querySelectorAll(".close-sgroup")),
+    expandedClass = "is-expanded",
+    hasExpandedClass = "has-expanded-item";
+    return { init: init };
+    function init() {
+        _initEvents();
+    }
+    function _initEvents() {
+        sgroups.forEach(function (element) {
+            element.onclick = function () {
+                _opensgroup(this);
+            };
+        });
+        closeButtons.forEach(function (element) {
+            element.onclick = function (element) {
+                element.stopPropagation();
+                _closesgroup(this.parentElement);
+            };
+        });
+    }
+    function _opensgroup(element) {
+        if (!element.classList.contains(expandedClass)) {
+            element.classList.add(expandedClass);
+            wrapper.classList.add(hasExpandedClass);
+        }
+    }
+    function _closesgroup(element) {
+        if (element.classList.contains(expandedClass)) {
+            element.classList.remove(expandedClass);
+            wrapper.classList.remove(hasExpandedClass);
+        }
+    }
+})();
+Boxlayout.init();    
+</script>
   
 </body>
 {% include 'navbar/footer.html' %}
